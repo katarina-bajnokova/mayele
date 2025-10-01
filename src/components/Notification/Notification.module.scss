@@ -1,0 +1,70 @@
+@use "../../styles" as *;
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+  font-family: $body-font;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  position: relative;
+  color: $color-text;
+  max-width: 400px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    border-width: 12px 12px 0 12px;
+    border-style: solid;
+    border-color: transparent;
+  }
+
+  &.info {
+    background: $color-primary-100;
+    color: $color-primary-900;
+
+    &::after {
+      border-top-color: $color-primary-100;
+    }
+  }
+
+  &.success {
+    background: $color-success-100;
+    color: $color-success-900;
+
+    &::after {
+      border-top-color: $color-success-100;
+    }
+  }
+
+  &.warning {
+    background: $color-warning-100;
+    color: $color-warning-800;
+
+    &::after {
+      border-top-color: $color-warning-100;
+    }
+  }
+
+  &.error {
+    background: $color-accent-100;
+    color: $color-accent-900;
+
+    &::after {
+      border-top-color: $color-accent-100;
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+  }
+
+  .message {
+    flex: 1;
+  }
+}
