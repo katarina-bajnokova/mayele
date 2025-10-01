@@ -6,7 +6,13 @@ function Navbar() {
 
   return (
     <nav className={styles.navbar} aria-label="Main navigation">
-      <div className={styles.brand}>Mayele</div>
+      <div className={styles.brand}>
+        <img
+          src="/images/logo/mayele.webp"
+          alt="Mayele logo"
+          className={styles.logo}
+        />
+      </div>
 
       <button
         className={styles.toggle}

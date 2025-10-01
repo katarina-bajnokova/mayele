@@ -1,0 +1,68 @@
+@use "../../styles/tokens/colors" as *;
+@use "../../styles/tokens/typography" as *;
+@use "../../styles/utilities/mixins" as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-primary-100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  padding: 3rem 0 4rem;
+
+  .heroContent {
+    max-width: 550px;
+
+    .heroTitle {
+      @include heading-xl;
+      font-size: 3rem;
+      color: $color-gray-900;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+  }
+
+  .heroMascot {
+    flex-shrink: 0;
+
+    .okapi {
+      height: 340px;
+      width: auto;
+    }
+  }
+}
+
+.infoSection {
+  padding: 5rem 0;
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .infoTitle {
+    @include heading-lg;
+    margin-bottom: 2.5rem;
+    color: $color-gray-900;
+  }
+
+  .infoGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
