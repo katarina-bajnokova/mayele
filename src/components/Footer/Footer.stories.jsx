@@ -4,26 +4,54 @@ export default {
   title: "Mayele/Footer",
   component: Footer,
   tags: ["autodocs"],
+  argTypes: {
+    showExplore: { control: "boolean", description: "Toggle Explore section" },
+    showCompany: { control: "boolean", description: "Toggle Company section" },
+    showSupport: { control: "boolean", description: "Toggle Support section" },
+    showSocial: { control: "boolean", description: "Toggle Social section" },
+  },
   parameters: {
     layout: "fullscreen",
+  },
+};
+
+export const Default = {
+  args: {
+    showExplore: true,
+    showCompany: true,
+    showSupport: true,
+    showSocial: true,
+  },
+};
+
+export const Minimal = {
+  args: {
+    showExplore: false,
+    showCompany: false,
+    showSupport: false,
+    showSocial: true,
+  },
+  parameters: {
     docs: {
       description: {
-        component: `
-The **Footer** provides structured secondary navigation.  
-
-Sections included:  
-- **Explore** → Play, Learn, Features, Pricing  
-- **Company** → About Us, Careers, Press, Collaborations  
-- **Support** → Contact, FAQ, Privacy, Terms  
-- **Follow Us** → Social media links (Facebook, Twitter, Instagram, LinkedIn)  
-
-Responsive:  
-- **Desktop** → columns aligned left.  
-- **Mobile** → stacked vertically with spacing.  
-        `,
+        story: "Minimal footer with only the social section enabled.",
       },
     },
   },
 };
 
-export const Default = {};
+export const CompanyOnly = {
+  args: {
+    showExplore: false,
+    showCompany: true,
+    showSupport: false,
+    showSocial: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: "Shows only the Company section of the footer.",
+      },
+    },
+  },
+};
