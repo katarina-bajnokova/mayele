@@ -1,0 +1,61 @@
+@use "../../styles" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px; // fixed square
+  height: 200px; // square
+  border-radius: 20px;
+  border: 6px solid $color-gray-200;
+  background: $color-surface;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.label {
+  @include body-text;
+  font-weight: $font-weight-semibold;
+  color: $color-text;
+}
+
+/* 🎨 Category Variants with matching border + light bg */
+.vegetables {
+  border-color: #2e7d32; // green
+  background: #e8f5e9;
+}
+
+.fruits {
+  border-color: #c62828; // red
+  background: #ffebee;
+}
+
+.animals {
+  border-color: #37474f; // grey-blue
+  background: #eceff1;
+}
+
+.numbers {
+  border-color: #f9a825; // yellow
+  background: #fffde7;
+}
