@@ -1,0 +1,83 @@
+@mixin heading-xl {
+  font-family: $heading-font;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
+}
+
+@mixin heading-lg {
+  font-family: $heading-font;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+@mixin heading-md {
+  font-family: $heading-font;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-normal;
+}
+
+@mixin subheader {
+  font-family: $heading-font;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  color: $color-text-muted;
+}
+
+@mixin body-text {
+  font-family: $body-font;
+  font-size: $font-size-base;
+  font-weight: $body-weight;
+  line-height: $line-height-normal;
+}
+
+@mixin caption {
+  font-family: $body-font;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-relaxed;
+  color: $color-text-muted;
+}
+
+@mixin text-primary {
+  color: $color-primary-500;
+}
+@mixin text-secondary {
+  color: $color-secondary-500;
+}
+@mixin text-accent {
+  color: $color-accent-500;
+}
+@mixin text-success {
+  color: $color-success-500;
+}
+@mixin text-warning {
+  color: $color-warning-500;
+}
+@mixin text-error {
+  color: $color-error;
+}
+
+@mixin padding-x($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin padding-y($size) {
+  padding-top: $size;
+  padding-bottom: $size;
+}
+
+@mixin margin-x($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin margin-y($size) {
+  margin-top: $size;
+  margin-bottom: $size;
+}
