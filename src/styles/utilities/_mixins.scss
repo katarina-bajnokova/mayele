@@ -1,3 +1,7 @@
+@use "../tokens/typography" as *;
+@use "../tokens/colors" as *;
+@use "../tokens/spacing" as *;
+
 @mixin heading-xl {
   font-family: $heading-font;
   font-size: $font-size-4xl;

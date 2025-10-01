@@ -1,0 +1,81 @@
+@use "../../styles" as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $body-font;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-base;
+  border: none;
+  border-radius: 40px;
+  padding: $space-3 $space-6;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+
+  &:disabled {
+    background: $color-gray-300;
+    color: $color-gray-600;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.65;
+    transform: none;
+
+    &:hover,
+    &:active {
+      background: $color-gray-300;
+      color: $color-gray-600;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  &.primary {
+    background: $color-secondary-500;
+    color: $color-text;
+
+    &:hover:not(:disabled) {
+      background: $color-secondary-400;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active:not(:disabled) {
+      background: $color-secondary-600;
+      transform: translateY(0);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &.secondary {
+    background: $color-primary-500;
+    color: $color-gray-900;
+
+    &:hover:not(:disabled) {
+      background: $color-primary-400;
+    }
+  }
+
+  &.accent {
+    background: $color-accent-600;
+    color: $color-surface;
+
+    &:hover:not(:disabled) {
+      background: $color-accent-500;
+    }
+  }
+
+  &.sm {
+    font-size: $font-size-sm;
+    padding: $space-2 $space-4;
+  }
+  &.md {
+    font-size: $font-size-base;
+    padding: $space-3 $space-6;
+  }
+  &.lg {
+    font-size: $font-size-lg;
+    padding: $space-4 $space-8;
+  }
+}
