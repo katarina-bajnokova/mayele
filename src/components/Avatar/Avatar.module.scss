@@ -1,0 +1,45 @@
+@use "../../styles/tokens/colors" as *;
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $color-primary-100;
+  color: $color-primary-700;
+  font-weight: 600;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  &.sm {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  &.md {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+  }
+
+  &.lg {
+    width: 72px;
+    height: 72px;
+    font-size: 1.25rem;
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
