@@ -1,14 +1,17 @@
+@use "../../styles/tokens/colors" as *;
+@use "../../styles/tokens/spacing" as *;
+@use "../../styles/tokens/typography" as *;
+
 .progressGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: $space-4;
+  margin-top: $space-6;
 }
 
 .card {
-  border-radius: 1rem;
-  padding: 1rem 1.5rem;
-  color: white;
+  border-radius: $space-4;
+  padding: $space-4 $space-6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,14 +20,17 @@
   &:hover {
     transform: translateY(-4px);
   }
+
+  /* fallback text styling */
+  font-family: $body-font;
 }
 
 .cardHeader {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  gap: $space-2;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-md;
 
   svg {
     width: 1.5rem;
@@ -33,48 +39,53 @@
 }
 
 .cardBody {
-  margin-top: 0.5rem;
+  margin-top: $space-2;
 
   h2 {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin-bottom: 0.25rem;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    margin-bottom: $space-1;
   }
 
   p {
-    font-size: 0.9rem;
-    opacity: 0.85;
+    font-size: $font-size-sm;
+    opacity: 0.95;
   }
 }
 
-/* Progress bar styling */
 .progressBar {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba($color-gray-50, 0.3);
   height: 6px;
   border-radius: 999px;
   overflow: hidden;
-  margin-top: 0.5rem;
+  margin-top: $space-2;
 
   div {
-    background: white;
+    background: $color-gray-900; // switched to dark so it's visible even on light gradients
     height: 100%;
     transition: width 0.3s ease;
   }
 }
 
-/* Gradient backgrounds */
+/* Gradient backgrounds with text contrast adjustments */
 .orangeRed {
-  background: linear-gradient(135deg, #fb923c, #ef4444);
+  background: linear-gradient(135deg, $color-warning-600, $color-accent-500);
+  color: $color-gray-50; // white text on dark bg
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .greenBlue {
-  background: linear-gradient(135deg, #22c55e, #3b82f6);
+  background: linear-gradient(135deg, $color-success-600, $color-primary-700);
+  color: $color-gray-50; // white text on dark bg
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .purplePink {
-  background: linear-gradient(135deg, #a855f7, #ec4899);
+  background: linear-gradient(135deg, $color-primary-200, $color-accent-200);
+  color: $color-gray-900; // dark text on lighter gradient
 }
 
 .yellowOrange {
-  background: linear-gradient(135deg, #facc15, #fb923c);
+  background: linear-gradient(135deg, $color-secondary-400, $color-warning-600);
+  color: $color-gray-900; // dark text on lighter bg
 }
