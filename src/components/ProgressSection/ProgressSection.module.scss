@@ -1,0 +1,80 @@
+.progressGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.cardBody {
+  margin-top: 0.5rem;
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+}
+
+/* Progress bar styling */
+.progressBar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 6px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+
+  div {
+    background: white;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+}
+
+/* Gradient backgrounds */
+.orangeRed {
+  background: linear-gradient(135deg, #fb923c, #ef4444);
+}
+
+.greenBlue {
+  background: linear-gradient(135deg, #22c55e, #3b82f6);
+}
+
+.purplePink {
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+}
+
+.yellowOrange {
+  background: linear-gradient(135deg, #facc15, #fb923c);
+}
