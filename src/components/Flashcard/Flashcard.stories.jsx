@@ -1,7 +1,7 @@
 import Flashcard from "./Flashcard";
 
 export default {
-  title: "Mayele/Flashcard",
+  title: "Components/UI/Flashcard",
   component: Flashcard,
   tags: ["autodocs"],
   parameters: {

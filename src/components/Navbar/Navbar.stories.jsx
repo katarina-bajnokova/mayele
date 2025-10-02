@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 
 export default {
-  title: "Mayele/Navbar",
+  title: "Components/Layout/Navbar",
   component: Navbar,
   tags: ["autodocs"],
   parameters: {

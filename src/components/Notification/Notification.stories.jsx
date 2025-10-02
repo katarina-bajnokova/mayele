@@ -1,7 +1,7 @@
 import Notification from "./Notification";
 
 export default {
-  title: "Mayele/Notification",
+  title: "Components/UI/Notification",
   component: Notification,
   tags: ["autodocs"],
   argTypes: {

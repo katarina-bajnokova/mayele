@@ -1,7 +1,7 @@
 import StatsCard from "./StatsCard";
 
 export default {
-  title: "Mayele/StatsCard",
+  title: "Components/Cards/StatsCard",
   component: StatsCard,
   tags: ["autodocs"],
   parameters: {

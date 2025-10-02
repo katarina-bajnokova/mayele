@@ -1,7 +1,7 @@
 import CategoryCard from "./CategoryCard";
 
 export default {
-  title: "Mayele/CategoryCard",
+  title: "Components/Cards/CategoryCard",
   component: CategoryCard,
   tags: ["autodocs"],
   parameters: {

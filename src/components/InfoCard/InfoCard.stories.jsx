@@ -3,7 +3,7 @@ import { FiTrendingUp } from "react-icons/fi";
 import InfoCard from "./InfoCard";
 
 export default {
-  title: "Mayele/InfoCard",
+  title: "Components/Cards/InfoCard",
   component: InfoCard,
   tags: ["autodocs"],
   parameters: {

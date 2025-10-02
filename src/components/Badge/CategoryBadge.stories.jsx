@@ -1,7 +1,7 @@
 import CategoryBadge from "./CategoryBadge";
 
 export default {
-  title: "Mayele/Badge",
+  title: "Components/UI/Badge",
   component: CategoryBadge,
   tags: ["autodocs"],
   parameters: {

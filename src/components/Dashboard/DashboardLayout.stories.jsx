@@ -2,7 +2,7 @@ import DashboardLayout from "./DashboardLayout";
 import StatsCard from "../StatsCard/StatsCard";
 
 export default {
-  title: "Mayele/Layout/Dashboard",
+  title: "Components/Layout/Dashboard",
   component: DashboardLayout,
   tags: ["autodocs"],
   parameters: {

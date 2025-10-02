@@ -1,7 +1,7 @@
 import ProfileDashboard from "./ProfileDashboard";
 
 export default {
-  title: "Mayele/Dashboard/ProfileDashboard",
+  title: "Components/Layout/ProfileDashboard",
   component: ProfileDashboard,
   tags: ["autodocs"],
   parameters: {

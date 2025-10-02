@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 
 export default {
-  title: "Mayele/Footer",
+  title: "Components/Layout/Footer",
   component: Footer,
   tags: ["autodocs"],
   argTypes: {
