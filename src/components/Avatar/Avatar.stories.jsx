@@ -1,7 +1,7 @@
 import Avatar from "./Avatar";
 
 export default {
-  title: "Mayele/Avatar",
+  title: "Components/UI/Avatar",
   component: Avatar,
   tags: ["autodocs"],
   argTypes: {

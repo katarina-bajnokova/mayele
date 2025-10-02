@@ -1,7 +1,7 @@
 import Button from "./Button";
 
 export default {
-  title: "Mayele/Button",
+  title: "Components/UI/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
