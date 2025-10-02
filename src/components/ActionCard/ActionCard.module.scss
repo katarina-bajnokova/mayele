@@ -1,0 +1,113 @@
+@use "../../styles/tokens/colors" as *;
+@use "../../styles/tokens/spacing" as *;
+@use "../../styles/tokens/typography" as *;
+
+.card {
+  --radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  background: $color-surface;
+  color: $color-text;
+  border: 1px solid $color-border;
+  border-radius: var(--radius);
+  padding: $space-6;
+  min-width: 260px;
+  max-width: 340px;
+  min-height: 200px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba($color-gray-900, 0.05);
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba($color-gray-900, 0.08);
+    border-color: $color-gray-400;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba($color-primary-500, 0.25),
+      0 14px 28px rgba($color-gray-900, 0.08);
+  }
+}
+
+.align-left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.align-center {
+  text-align: center;
+  align-items: center;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 0 8px 20px rgba($color-gray-900, 0.05);
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-surface;
+  box-shadow: inset 0 -8px 14px rgba($color-gray-900, 0.15),
+    0 6px 18px rgba($color-gray-900, 0.08);
+}
+
+.title {
+  margin: $space-1 0 0;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  font-family: $heading-font;
+}
+
+.description {
+  margin: $space-2 0 0;
+  font-size: $font-size-sm;
+  color: $color-text-muted;
+  font-family: $body-font;
+  line-height: $line-height-normal;
+}
+
+.tone-indigo .icon {
+  background: linear-gradient(135deg, $color-primary-500, $color-accent-500);
+}
+.tone-teal .icon {
+  background: linear-gradient(135deg, $color-primary-400, $color-success-600);
+}
+.tone-orange .icon {
+  background: linear-gradient(135deg, $color-warning-500, $color-accent-500);
+}
+.tone-rose .icon {
+  background: linear-gradient(135deg, $color-accent-400, $color-accent-700);
+}
+.tone-cyan .icon {
+  background: linear-gradient(135deg, $color-primary-300, $color-primary-700);
+}
+.tone-amber .icon {
+  background: linear-gradient(
+    135deg,
+    $color-secondary-400,
+    $color-secondary-600
+  );
+}
+.tone-blue .icon {
+  background: linear-gradient(135deg, $color-primary-700, $color-primary-400);
+}
+
+.icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.8;
+}
