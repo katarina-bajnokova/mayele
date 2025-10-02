@@ -1,0 +1,38 @@
+@use "../../styles/tokens/colors" as *;
+@use "../../styles/tokens/spacing" as *;
+@use "../../styles/tokens/typography" as *;
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+  padding: $space-10;
+  background: $color-background;
+  min-height: 100vh;
+}
+
+.sectionTitle {
+  font-family: $heading-font;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-6;
+  color: $color-text;
+}
+
+.progressSection {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.actionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: $space-6;
+}
