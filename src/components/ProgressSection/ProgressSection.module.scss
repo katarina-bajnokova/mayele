@@ -21,7 +21,6 @@
     transform: translateY(-4px);
   }
 
-  /* fallback text styling */
   font-family: $body-font;
 }
 
@@ -61,31 +60,31 @@
   margin-top: $space-2;
 
   div {
-    background: $color-gray-900; // switched to dark so it's visible even on light gradients
+    background: $color-gray-900;
     height: 100%;
     transition: width 0.3s ease;
   }
 }
 
-/* Gradient backgrounds with text contrast adjustments */
 .orangeRed {
+  background: $color-accent-500;
   background: linear-gradient(135deg, $color-warning-600, $color-accent-500);
-  color: $color-gray-50; // white text on dark bg
+  color: $color-gray-50;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .greenBlue {
   background: linear-gradient(135deg, $color-success-600, $color-primary-700);
-  color: $color-gray-50; // white text on dark bg
+  color: $color-gray-50;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .purplePink {
   background: linear-gradient(135deg, $color-primary-200, $color-accent-200);
-  color: $color-gray-900; // dark text on lighter gradient
+  color: $color-gray-900;
 }
 
 .yellowOrange {
   background: linear-gradient(135deg, $color-secondary-400, $color-warning-600);
-  color: $color-gray-900; // dark text on lighter bg
+  color: $color-gray-900;
 }
