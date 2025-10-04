@@ -7,7 +7,7 @@ export default function Notification({
   type = "info",
   message,
   onClose,
-  duration = 5000, // default auto-dismiss time
+  duration = 5000,
 }) {
   const icons = {
     info: <MdInfo className={styles.icon} />,
@@ -16,7 +16,6 @@ export default function Notification({
     error: <MdError className={styles.icon} />,
   };
 
-  // Auto-dismiss after duration
   useEffect(() => {
     if (!onClose) return;
     const timer = setTimeout(() => {

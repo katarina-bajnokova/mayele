@@ -42,8 +42,8 @@
   }
 
   &.warning {
-    background: $color-warning-100;
-    color: $color-warning-800;
+    background: $color-warning-50;
+    color: $color-warning-900;
 
     &::after {
       border-top-color: $color-warning-100;
