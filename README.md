@@ -1,16 +1,48 @@
-# React + Vite
+# Mayele Design System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A reusable design system built with **React, Vite, SCSS, Storybook, and Framer Motion**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- ⚛️ **React + Vite** project setup
+- 🎨 **SCSS modules + design tokens** (`_colors.scss`, `_typography.scss`, `_spacing.scss`)
+- 📚 **Storybook** for component documentation and exploration
+- 🎭 **Framer Motion** for interactive animations
+- ♿ **Accessibility tested** with Storybook a11y addon (WCAG AA compliance)
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Implemented Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The system contains all required components plus additional reusable UI blocks:
+
+- **ActionCard** – interactive action tiles
+- **Avatar** – user image or initials
+- **Badge** – status/notification pill (variants)
+- **Button** – Primary, Secondary, Accent with controls for size/label/disabled
+- **CategoryCard** – reusable card for categories
+- **Dashboard** – layout frame (side nav + main content)
+- **DashboardHeader** – header with user info, points, and settings
+- **Flashcard** – interactive learning card
+- **Footer** – simple footer with links
+- **InfoCard** – informational content card
+- **Navbar** – responsive navigation bar
+- **Notification** – notification message block
+- **ProgressSection** – progress overview section
+- **StatsCard** – statistics display card
+
+---
+
+## Project Setup
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+```bash
+npm run storybook
+```
