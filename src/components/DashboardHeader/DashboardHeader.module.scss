@@ -16,13 +16,14 @@
     $color-accent-400,
     $color-secondary-500
   );
+  background-color: rgba($color-gray-900, 0.45);
   color: $color-gray-50;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba($color-gray-900, 0.3);
+    background: rgba($color-gray-900, 0.45);
     border-radius: inherit;
   }
 
@@ -39,7 +40,7 @@
   h1 {
     @include heading-md;
     margin: 0;
-    color: $color-accent-50;
+    color: $color-gray-50;
     padding: $space-1 $space-2;
     border-radius: $space-2;
   }
@@ -50,6 +51,7 @@
     opacity: 0.95;
     padding: $space-1 $space-2;
     border-radius: $space-2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   }
 }
 
