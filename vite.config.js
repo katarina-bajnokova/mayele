@@ -1,30 +1,23 @@
-/// <reference types="vitest/config" />
+<reference types="vitest/config" />;
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-
-// https://vite.dev/config/
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 
-const dirname =
-  typeof __dirname !== "undefined"
-    ? __dirname
-    : path.dirname(fileURLToPath(import.meta.url));
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
   plugins: [react()],
   server: {
-    open: true, // 👈 this makes `npm run dev` auto-open the browser
-    port: 5173, // optional: lock a port instead of random one
+    open: true,
+    port: 5173,
   },
   test: {
     projects: [
       {
         extends: true,
         plugins: [
-          // The plugin will run tests for the stories defined in your Storybook config
           storybookTest({
             configDir: path.join(dirname, ".storybook"),
           }),
@@ -35,11 +28,7 @@ export default defineConfig({
             enabled: true,
             headless: true,
             provider: "playwright",
-            instances: [
-              {
-                browser: "chromium",
-              },
-            ],
+            instances: [{ browser: "chromium" }],
           },
           setupFiles: [".storybook/vitest.setup.js"],
         },
